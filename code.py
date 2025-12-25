@@ -211,12 +211,23 @@
 #     case _:
 #         print("Something Error")
 
-item_list = [10.5, 2.4, 3.6, 7.0, 8, 15]
+# item_list = [10.5, 2.4, 3.6, 7.0, 8, 15]
 
-match item_list:
-    # case [first, second, *restofnumbers]:
-    #     print(first, second, restofnumbers)
-    
-    case [*first, second, restofnumbers]:
-        print(first, second, restofnumbers)
+# match item_list:
+#     case [first, second, *restofnumbers]:
+#         print(first, second, restofnumbers)
 
+# event = {"type": "login", "user": "bulbul"}
+
+###########################################################
+
+## In the dictionary it is important to match the Key.
+
+new_dict = {"Gender": "Male", "Name": "Shams"}
+
+match new_dict:
+    case {"Gender": g, "Name": n}:
+        print(f"He is {g}, and his name is {n}")
+
+    case{"Sex": g, "Name": n}:
+        print(f"He is {g}, and his name is {n}")
