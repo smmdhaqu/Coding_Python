@@ -143,34 +143,71 @@
 # else:
 #     print("User is there but not active")
 
-raw = input("Enter key=value pairs: ").split()
-data = {}
-for part in raw:
-    key, value = part.split("=", 1)
-    data[key] = value
-print(data)
-while True:
-    cmd = input(">>> ").strip().lower()
-    if cmd == "exit":
-        break
+# raw = input("Enter key=value pairs: ").split()
+# data = {}
+# for part in raw:
+#     key, value = part.split("=", 1)
+#     data[key] = value
+# print(data)
+# while True:
+#     cmd = input(">>> ").strip().lower()
+#     if cmd == "exit":
+#         break
 
-    parts = cmd.split()
-    if len(parts) != 3:
-        print("Use: add 5 7")
-        continue
+#     parts = cmd.split()
+#     if len(parts) != 3:
+#         print("Use: add 5 7")
+#         continue
 
-    op, a_str, b_str = parts
-    if not (a_str.lstrip("-").isdigit() and b_str.lstrip("-").isdigit()):
-        print("Numbers only")
-        continue
+#     op, a_str, b_str = parts
+#     if not (a_str.lstrip("-").isdigit() and b_str.lstrip("-").isdigit()):
+#         print("Numbers only")
+#         continue
 
-    a, b = int(a_str), int(b_str)
+#     a, b = int(a_str), int(b_str)
 
-    if op == "add":
-        print(a + b)
-    elif op == "mul":
-        print(a * b)
-    else:
-        print("Unknown operation")
+#     if op == "add":
+#         print(a + b)
+#     elif op == "mul":
+#         print(a * b)
+#     else:
+#         print("Unknown operation")
 
+# day = input("Enter the day here: ")
+
+
+# match day:
+#     case "Sat" | "Sun":
+#         print("It's weekend")
+#     case "Mon" | "Tue" | "Wed" | "Thu" | "Fri":
+#         print("Weekdays")
+    
+#     case _:
+#         print("Something Error")
+
+# new_tuple = (10, 20)
+
+# match new_tuple:
+
+#     case (0, 0):
+#         print("Origin")
+    
+#     case (0, y):
+#         print(f"The value of x is x = {x}")
+    
+#     case (x, 0):
+#         print(f"The value of y is y = {y}")
+    
+#     case (x, y):
+#         print(f"The value of y is y = {y}")
+
+
+value_list = [10, 20]
+
+match value_list:
+    case [a, b]:
+        print("The total value is: ", a+b)
+
+    case _:
+        print("Something Error")
 
