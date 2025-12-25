@@ -202,12 +202,21 @@
 #         print(f"The value of y is y = {y}")
 
 
-value_list = [10, 20]
+# value_list = [10, 20]
 
-match value_list:
-    case [a, b]:
-        print("The total value is: ", a+b)
+# match value_list:
+#     case [a, b]:
+#         print("The total value is: ", a+b)
 
-    case _:
-        print("Something Error")
+#     case _:
+#         print("Something Error")
+
+item_list = [10.5, 2.4, 3.6, 7.0, 8, 15]
+
+match item_list:
+    # case [first, second, *restofnumbers]:
+    #     print(first, second, restofnumbers)
+    
+    case [*first, second, restofnumbers]:
+        print(first, second, restofnumbers)
 
