@@ -223,11 +223,35 @@
 
 ## In the dictionary it is important to match the Key.
 
-new_dict = {"Gender": "Male", "Name": "Shams"}
+# new_dict = {"Gender": "Male", "Name": "Shams"}
 
-match new_dict:
-    case {"Gender": g, "Name": n}:
-        print(f"He is {g}, and his name is {n}")
+# match new_dict:
+#     case {"Gender": g, "Name": n}:
+#         print(f"He is {g}, and his name is {n}")
 
-    case{"Sex": g, "Name": n}:
-        print(f"He is {g}, and his name is {n}")
+#     case{"Sex": g, "Name": n}:
+#         print(f"He is {g}, and his name is {n}")
+
+# x = 12
+
+# match x:
+#     case n if n <= 5:
+#         print ("The value is less than 5")
+#     case n if 0 <= n <= 10:   
+#         print("The number is between 0 t0 10")
+#     case n:
+#         print("The number is above 10")
+
+info_dict= {"name": "Shams", "gender": "Male", "login": "active", "time": "2025-12-25T10:00:00Z"}
+
+def data(e: dict) -> str:
+    match e:
+        case {"name": n, "gender": g, "login": l, "time": t}:
+            return f"He is {n}, he is {l} from {t}"
+        
+        case {"name": n, "login": l, "time": t}:
+            return f"He is {n}, he is {l} from {t}"
+
+
+print(data(info_dict))
+
