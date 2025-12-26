@@ -291,14 +291,26 @@
     
 # print(count)
 
-pairs = [("Shams", 26), ("Raaju", 25), ("Putul", 22)]
+# pairs = [("Shams", 26), ("Raaju", 25), ("Putul", 22)]
 
-print(f"{'Name': <10} {'|': ^0} {'Age': >3}")
+# print(f"{'Name': <10} {'Age': >3}")
 
-print("-"*14)
+# print("-"*14)
 
-for name, age in pairs:
-    print(f"{name: <10} {age: >3}")
+# for name, age in pairs:
+#     print(f"{name: <10} {age: >3}")
 
 
+# infor_list =  [("Shams", 28), ("Ahmed", 26), ("Raaju", 25)]
 
+# print (f"{'Name': <7} {'Age':>3}")
+
+# print ("-"*13)
+
+# for name, age in infor_list:
+#     print(f"{name:<10} {age:>3}")
+
+
+new_list =["Shams", "Raaju", "Ahmed"]
+for number, name in enumerate (new_list, start = 1):
+    print(number, name)
