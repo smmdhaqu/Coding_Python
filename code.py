@@ -311,6 +311,20 @@
 #     print(f"{name:<10} {age:>3}")
 
 
-new_list =["Shams", "Raaju", "Ahmed"]
-for number, name in enumerate (new_list, start = 1):
-    print(number, name)
+# new_list =["Shams", "Raaju", "Ahmed"]
+# for number, name in enumerate (new_list, start = 1):
+#     print(number, name)
+
+
+### Adding 2 List using zip and for loop
+# names = ["Shams", "Raaju", "Ahmed"]
+# ages = [25, 26, 27]
+
+# for name, age in zip(names, ages):
+#     print(f"{name} is {age} years old")
+
+matrix = [[1, 2], [3, 4], [5,6]]
+
+for whole_matrix in matrix:
+    for each_element in whole_matrix:
+        print(each_element)
