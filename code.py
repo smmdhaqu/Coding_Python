@@ -232,6 +232,7 @@
 #     case{"Sex": g, "Name": n}:
 #         print(f"He is {g}, and his name is {n}")
 
+#########################################################################
 # x = 12
 
 # match x:
@@ -241,8 +242,13 @@
 #         print("The number is between 0 t0 10")
 #     case n:
 #         print("The number is above 10")
+# %%
+info_dict= {"name": "Shams", 
+            "gender": "Male", 
+            "login": "active", 
+            "time": "2025-12-25T10:00:00Z"}
 
-info_dict= {"name": "Shams", "gender": "Male", "login": "active", "time": "2025-12-25T10:00:00Z"}
+
 
 def data(e: dict) -> str:
     match e:
@@ -255,3 +261,18 @@ def data(e: dict) -> str:
 
 print(data(info_dict))
 
+###############################################################
+##################### For Loop ################################
+
+# %%
+for x in range(10, 0, -1):
+    print(x)
+
+
+# %%
+
+values = ["a", "b", "c"]
+
+for i, x in enumerate(values, start = 1):
+    print(i, x)
+# %%
