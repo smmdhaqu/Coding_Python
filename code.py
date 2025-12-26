@@ -264,15 +264,36 @@ print(data(info_dict))
 ###############################################################
 ##################### For Loop ################################
 
-# %%
-for x in range(10, 0, -1):
-    print(x)
+
+# for x in range(10, 0, -1):
+#     print(x)
 
 
-# %%
 
-values = ["a", "b", "c"]
 
-for i, x in enumerate(values, start = 1):
-    print(i, x)
-# %%
+# values = ["a", "b", "c"]
+
+# for i, x in enumerate(values, start = 1):
+#     print(i, x)
+
+
+# items = ("x", "y", "z")
+
+# print(list(enumerate(items)))
+# print(list(enumerate(items, start=1)))
+
+
+
+# name = "Data Engineering"
+# count = 0
+# for x in name:
+#     if x != " ":
+#         count += 1
+    
+# print(count)
+
+pairs = [("Shams", 26), ("Raaju", 25), ("Putul", 22)]
+
+for name, age in pairs:
+    print(name, age)
+
