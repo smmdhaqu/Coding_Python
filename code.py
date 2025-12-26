@@ -242,24 +242,23 @@
 #         print("The number is between 0 t0 10")
 #     case n:
 #         print("The number is above 10")
-# %%
-info_dict= {"name": "Shams", 
-            "gender": "Male", 
-            "login": "active", 
-            "time": "2025-12-25T10:00:00Z"}
+# info_dict= {"name": "Shams", 
+#             "gender": "Male", 
+#             "login": "active", 
+#             "time": "2025-12-25T10:00:00Z"}
 
 
 
-def data(e: dict) -> str:
-    match e:
-        case {"name": n, "gender": g, "login": l, "time": t}:
-            return f"He is {n}, he is {l} from {t}"
+# def data(e: dict) -> str:
+#     match e:
+#         case {"name": n, "gender": g, "login": l, "time": t}:
+#             return f"He is {n}, he is {l} from {t}"
         
-        case {"name": n, "login": l, "time": t}:
-            return f"He is {n}, he is {l} from {t}"
+#         case {"name": n, "login": l, "time": t}:
+#             return f"He is {n}, he is {l} from {t}"
 
 
-print(data(info_dict))
+# print(data(info_dict))
 
 ###############################################################
 ##################### For Loop ################################
@@ -294,6 +293,12 @@ print(data(info_dict))
 
 pairs = [("Shams", 26), ("Raaju", 25), ("Putul", 22)]
 
+print(f"{'Name': <10} {'|': ^0} {'Age': >3}")
+
+print("-"*14)
+
 for name, age in pairs:
-    print(name, age)
+    print(f"{name: <10} {age: >3}")
+
+
 
