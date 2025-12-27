@@ -328,3 +328,16 @@ matrix = [[5, 7], [8, 9]]
 for row_count, real_row in enumerate(matrix):
     for column_count, value_show in enumerate(real_row):
         print(f"row = {row_count}, column = {column_count}, Value = {value_show}")
+
+
+new_list = [2, 3, 4, 5, 6]
+
+square = [n*n for n in new_list if n%2 ==1]
+print(square)
+
+names = "Shams"
+for letter in names:
+    if letter == "a":
+        pass
+        print("This letter is blocked")
+    print(letter)
