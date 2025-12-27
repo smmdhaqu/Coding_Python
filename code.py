@@ -323,8 +323,8 @@
 # for name, age in zip(names, ages):
 #     print(f"{name} is {age} years old")
 
-matrix = [[1, 2], [3, 4], [5,6]]
+matrix = [[5, 7], [8, 9]]
 
-for whole_matrix in matrix:
-    for each_element in whole_matrix:
-        print(each_element)
+for row_count, real_row in enumerate(matrix):
+    for column_count, value_show in enumerate(real_row):
+        print(f"row = {row_count}, column = {column_count}, Value = {value_show}")
