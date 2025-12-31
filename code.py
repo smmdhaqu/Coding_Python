@@ -323,21 +323,36 @@
 # for name, age in zip(names, ages):
 #     print(f"{name} is {age} years old")
 
-matrix = [[5, 7], [8, 9]]
+# matrix = [[5, 7], [8, 9]]
 
-for row_count, real_row in enumerate(matrix):
-    for column_count, value_show in enumerate(real_row):
-        print(f"row = {row_count}, column = {column_count}, Value = {value_show}")
+# for row_count, real_row in enumerate(matrix):
+#     for column_count, value_show in enumerate(real_row):
+#         print(f"row = {row_count}, column = {column_count}, Value = {value_show}")
 
 
-new_list = [2, 3, 4, 5, 6]
+# new_list = [2, 3, 4, 5, 6]
 
-square = [n*n for n in new_list if n%2 ==1]
-print(square)
+# square = [n*n for n in new_list if n%2 ==1]
+# print(square)
 
-names = "Shams"
-for letter in names:
-    if letter == "a":
-        pass
-        print("This letter is blocked")
-    print(letter)
+# names = "Shams"
+# for letter in names:
+#     if letter == "a":
+#         pass
+#         print("This letter is blocked")
+#
+
+list_dict = [
+    {"person": "Male", "number": 1},
+    {"person": "Female", "number": 2},
+    {"person": "Male", "number": 3}
+    ]
+
+
+count = {}
+
+for x in list_dict:
+    t = x.get("person", "Unknown")
+    count [t] = count.get(t, 0) + 1
+
+print(count)
