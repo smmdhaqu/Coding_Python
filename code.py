@@ -384,3 +384,15 @@ print("and you are a", getting_info2)
 
 adding_info = info.get("Graduation", "Computer Engineer")
 print("You are a", adding_info)
+
+
+info.update ({"Name": "Shamsul Haque", "Age": 28})
+
+print(info)
+
+if info["Age"] == 28:
+    info["Age"] = 26
+print(info)
+
+for key in info:
+    print(key, ":", info[key])
