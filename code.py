@@ -342,17 +342,45 @@
 #         print("This letter is blocked")
 #
 
-list_dict = [
-    {"person": "Male", "number": 1},
-    {"person": "Female", "number": 2},
-    {"person": "Male", "number": 3}
-    ]
+# list_dict = [
+#     {"person": "Male", "number": 1},
+#     {"person": "Female", "number": 2},
+#     {"person": "Male", "number": 3}
+#     ]
 
 
-count = {}
+# count = {}
 
-for x in list_dict:
-    t = x.get("person", "Unknown")
-    count [t] = count.get(t, 0) + 1
+# for x in list_dict:
+#     t = x.get("person", "Unknown")
+#     count [t] = count.get(t, 0) + 1
 
-print(count)
+# print(count)
+# info = dict (Name = "Shams", Profession = "Student", Age = 25)
+# name = info.get("Name")
+
+# print("Name is: ", name)
+
+
+# information = {"Name": "Shams", "Profession": "Student", "Age":30}
+
+# names = information.get("Name")
+# print("Names is: ", names)
+
+info = {"Name": "Shams",  "Profession":  "Student", "Age": 25}
+
+all_keys = info.keys()
+print(all_keys)
+
+all_values = info.values()
+print(all_values)
+
+getting_info1 = info.get("Name")
+print("Your name is", getting_info1)
+
+getting_info2 = info["Profession"]
+print("and you are a", getting_info2)
+
+
+adding_info = info.get("Graduation", "Computer Engineer")
+print("You are a", adding_info)
