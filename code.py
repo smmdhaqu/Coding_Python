@@ -367,32 +367,46 @@
 # names = information.get("Name")
 # print("Names is: ", names)
 
-info = {"Name": "Shams",  "Profession":  "Student", "Age": 25}
+# info = {"Name": "Shams",  "Profession":  "Student", "Age": 25}
 
-all_keys = info.keys()
+# all_keys = info.keys()
+# print(all_keys)
+
+# all_values = info.values()
+# print(all_values)
+
+# getting_info1 = info.get("Name")
+# print("Your name is", getting_info1)
+
+# getting_info2 = info["Profession"]
+# print("and you are a", getting_info2)
+
+
+# adding_info = info.get("Graduation", "Computer Engineer")
+# print("You are a", adding_info)
+
+
+# info.update ({"Name": "Shamsul Haque", "Age": 28})
+
+# print(info)
+
+# if info["Age"] == 28:
+#     info["Age"] = 26
+# print(info)
+
+# for key in info:
+#     print(key, ":", info[key])
+
+
+product_name = {"Fruits": ["Malta, Apple, Blueberry"], "Flowers": ["Hibiscus, Rose, Lily"]}
+print(product_name)
+
+all_keys = product_name.keys()
 print(all_keys)
 
-all_values = info.values()
+all_values = product_name.values()
+
 print(all_values)
 
-getting_info1 = info.get("Name")
-print("Your name is", getting_info1)
-
-getting_info2 = info["Profession"]
-print("and you are a", getting_info2)
-
-
-adding_info = info.get("Graduation", "Computer Engineer")
-print("You are a", adding_info)
-
-
-info.update ({"Name": "Shamsul Haque", "Age": 28})
-
-print(info)
-
-if info["Age"] == 28:
-    info["Age"] = 26
-print(info)
-
-for key in info:
-    print(key, ":", info[key])
+access_values = product_name.get("Fruits")
+print(access_values)
