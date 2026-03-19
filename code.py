@@ -410,3 +410,17 @@ print(all_values)
 
 access_values = product_name.get("Fruits")
 print(access_values)
+
+print("Fruits" in product_name)
+print("Name" in product_name, "Not Found")
+
+print(product_name.get("Fruits"))
+
+# print(product_name["Name", "Not Found"])
+
+print(product_name.get("Name", "Not Found"))
+
+product_name.update({"Veg": ["Potatos", "Garlic", "Ginger"]})
+
+print(product_name)
+
