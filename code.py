@@ -424,21 +424,28 @@
 
 # print(product_name)
 
-a = {"Name": "Shams", "Age": 26}
+# a = {"Name": "Shams", "Age": 26}
 
-b = a.copy()
-b["Age"] = 30
+# b = a.copy()
+# b["Age"] = 30
 
-print(a)
-print(b)
+# print(a)
+# print(b)
 
-company = {
-    "Name" : "Siemens Energy",
-    "Department": {
-        "Software": ["Shams", "Maria"],
-        "Data Science" : ["Raaju", "Tuhin"]
-    }
-}
+# company = {
+#     "Name" : "Siemens Energy",
+#     "Department": {
+#         "Software": ["Shams", "Maria"],
+#         "Data Science" : ["Raaju", "Tuhin"]
+#     }
+# }
 
-print(company["Department"]["Data Science"])
+# print(company["Department"]["Data Science"][1])
 
+square = {x : x * x for x in range (1,6)}
+print(square)
+
+words = ["Apple", "Banana", "Cherry"]
+word_length = {word : len(word) for word in words}
+
+print(word_length)
