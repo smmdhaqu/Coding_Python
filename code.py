@@ -398,29 +398,47 @@
 #     print(key, ":", info[key])
 
 
-product_name = {"Fruits": ["Malta, Apple, Blueberry"], "Flowers": ["Hibiscus, Rose, Lily"]}
-print(product_name)
+# product_name = {"Fruits": ["Malta, Apple, Blueberry"], "Flowers": ["Hibiscus, Rose, Lily"]}
+# print(product_name)
 
-all_keys = product_name.keys()
-print(all_keys)
+# all_keys = product_name.keys()
+# print(all_keys)
 
-all_values = product_name.values()
+# all_values = product_name.values()
 
-print(all_values)
+# print(all_values)
 
-access_values = product_name.get("Fruits")
-print(access_values)
+# access_values = product_name.get("Fruits")
+# print(access_values)
 
-print("Fruits" in product_name)
-print("Name" in product_name, "Not Found")
+# print("Fruits" in product_name)
+# print("Name" in product_name, "Not Found")
 
-print(product_name.get("Fruits"))
+# print(product_name.get("Fruits"))
 
-# print(product_name["Name", "Not Found"])
+# # print(product_name["Name", "Not Found"])
 
-print(product_name.get("Name", "Not Found"))
+# print(product_name.get("Name", "Not Found"))
 
-product_name.update({"Veg": ["Potatos", "Garlic", "Ginger"]})
+# product_name.update({"Veg": ["Potatos", "Garlic", "Ginger"]})
 
-print(product_name)
+# print(product_name)
+
+a = {"Name": "Shams", "Age": 26}
+
+b = a.copy()
+b["Age"] = 30
+
+print(a)
+print(b)
+
+company = {
+    "Name" : "Siemens Energy",
+    "Department": {
+        "Software": ["Shams", "Maria"],
+        "Data Science" : ["Raaju", "Tuhin"]
+    }
+}
+
+print(company["Department"]["Data Science"])
 
