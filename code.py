@@ -442,10 +442,14 @@
 
 # print(company["Department"]["Data Science"][1])
 
-square = {x : x * x for x in range (1,6)}
-print(square)
+# square = {x : x * x for x in range (1,6)}
+# print(square)
 
-words = ["Apple", "Banana", "Cherry"]
-word_length = {word : len(word) for word in words}
+# words = ["Apple", "Banana", "Cherry"]
+# word_length = {word : len(word) for word in words}
 
-print(word_length)
+# print(word_length)
+
+square_even = {x : x * x for x in range(1, 11) if x % 2 == 0}
+
+print(square_even)
