@@ -450,6 +450,17 @@
 
 # print(word_length)
 
-square_even = {x : x * x for x in range(1, 11) if x % 2 == 0}
+# square_even = {x : x * x for x in range(1, 11) if x % 2 == 0}
 
-print(square_even)
+# print(square_even)
+#############################################################################
+
+#When the keys overlap, then the second dictionary will be counted
+
+a = {"x" : 10, "y" : 15, "z": 20}
+
+b = {"x" : 20, "y" : 25, "z" : 30, "a" : 40, "b": 50}
+
+c = a | b
+
+print(c)
