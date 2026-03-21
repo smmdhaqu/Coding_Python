@@ -465,41 +465,57 @@
 
 # print(c)
 ##############################################################################
-# student= [
-#     ("Software", "Shams"),
-#     ("AI", "Raaju"),
-#     ("Software", "Tuhin"),
-#     ("AI", "A U M"),
-#     ("CSE", ' ')
-# ]
+# # student= [
+# #     ("Software", "Shams"),
+# #     ("AI", "Raaju"),
+# #     ("Software", "Tuhin"),
+# #     ("AI", "A U M"),
+# #     ("CSE", ' ')
+# # ]
 
-# group = {}
+# # group = {}
 
-# for major, name in student:
-#     group.setdefault(major, []).append(name)
+# # for major, name in student:
+# #     group.setdefault(major, []).append(name)
 
-# print(group)
+# # print(group)
 
-################################################################################
-import copy
-a = {
-    "Student" : {
-        "Name": "Shams",
-        "Department": "Data",
-        "Age": 25
-    },
+# ################################################################################
+# import copy
+# a = {
+#     "Student" : {
+#         "Name": "Shams",
+#         "Department": "Data",
+#         "Age": 25
+#     },
 
-    "Student_2" : {
-        "Name": "Raaju",
-        "Department": "CSE",
-        "Age": 26
-    }
+#     "Student_2" : {
+#         "Name": "Raaju",
+#         "Department": "CSE",
+#         "Age": 26
+#     }
 
+# }
+
+# b = copy.deepcopy(a)
+# b["Student"]["Age"] = 30
+# b["Student_2"]["Age"] = 35
+
+# print(a)
+# print(b)
+##################################################################################
+
+student = {
+    "First_Person" : {"Name" : "Shams", "Marks" : 81},
+    "Second_Person" : {"Name" : "Raaju", "Marks" : 79},
+    "Third_Person" : {"Name" : "Tuhin", "Marks" : 85}
 }
 
-b = copy.deepcopy(a)
-b["Student"]["Age"] = 30
-b["Student_2"]["Age"] = 35
+passed_students ={
+    key: value["Name"]
+    
+    for key, value in student.items()
+    if value["Marks"] >= 80
+}
 
-print(a)
-print(b)
+print(passed_students)
