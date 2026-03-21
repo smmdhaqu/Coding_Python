@@ -423,7 +423,7 @@
 # product_name.update({"Veg": ["Potatos", "Garlic", "Ginger"]})
 
 # print(product_name)
-
+###########################################################################
 # a = {"Name": "Shams", "Age": 26}
 
 # b = a.copy()
@@ -431,7 +431,7 @@
 
 # print(a)
 # print(b)
-
+############################################################################
 # company = {
 #     "Name" : "Siemens Energy",
 #     "Department": {
@@ -441,7 +441,7 @@
 # }
 
 # print(company["Department"]["Data Science"][1])
-
+#############################################################################
 # square = {x : x * x for x in range (1,6)}
 # print(square)
 
@@ -465,17 +465,41 @@
 
 # print(c)
 ##############################################################################
-student= [
-    ("Software", "Shams"),
-    ("AI", "Raaju"),
-    ("Software", "Tuhin"),
-    ("AI", "A U M"),
-    ("CSE", ' ')
-]
+# student= [
+#     ("Software", "Shams"),
+#     ("AI", "Raaju"),
+#     ("Software", "Tuhin"),
+#     ("AI", "A U M"),
+#     ("CSE", ' ')
+# ]
 
-group = {}
+# group = {}
 
-for major, name in student:
-    group.setdefault(major, []).append(name)
+# for major, name in student:
+#     group.setdefault(major, []).append(name)
 
-print(group)
+# print(group)
+
+################################################################################
+import copy
+a = {
+    "Student" : {
+        "Name": "Shams",
+        "Department": "Data",
+        "Age": 25
+    },
+
+    "Student_2" : {
+        "Name": "Raaju",
+        "Department": "CSE",
+        "Age": 26
+    }
+
+}
+
+b = copy.deepcopy(a)
+b["Student"]["Age"] = 30
+b["Student_2"]["Age"] = 35
+
+print(a)
+print(b)
