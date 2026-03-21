@@ -457,10 +457,25 @@
 
 #When the keys overlap, then the second dictionary will be counted
 
-a = {"x" : 10, "y" : 15, "z": 20}
+# a = {"x" : 10, "y" : 15, "z": 20}
 
-b = {"x" : 20, "y" : 25, "z" : 30, "a" : 40, "b": 50}
+# b = {"x" : 20, "y" : 25, "z" : 30, "a" : 40, "b": 50}
 
-c = a | b
+# c = a | b
 
-print(c)
+# print(c)
+##############################################################################
+student= [
+    ("Software", "Shams"),
+    ("AI", "Raaju"),
+    ("Software", "Tuhin"),
+    ("AI", "A U M"),
+    ("CSE", ' ')
+]
+
+group = {}
+
+for major, name in student:
+    group.setdefault(major, []).append(name)
+
+print(group)
