@@ -397,6 +397,7 @@
 # for key in info:
 #     print(key, ":", info[key])
 
+##############################################################################
 
 # product_name = {"Fruits": ["Malta, Apple, Blueberry"], "Flowers": ["Hibiscus, Rose, Lily"]}
 # print(product_name)
@@ -423,7 +424,9 @@
 # product_name.update({"Veg": ["Potatos", "Garlic", "Ginger"]})
 
 # print(product_name)
-###########################################################################
+
+############################################################################
+
 # a = {"Name": "Shams", "Age": 26}
 
 # b = a.copy()
@@ -431,7 +434,9 @@
 
 # print(a)
 # print(b)
-############################################################################
+
+#############################################################################
+
 # company = {
 #     "Name" : "Siemens Energy",
 #     "Department": {
@@ -441,7 +446,9 @@
 # }
 
 # print(company["Department"]["Data Science"][1])
+
 #############################################################################
+
 # square = {x : x * x for x in range (1,6)}
 # print(square)
 
@@ -453,6 +460,7 @@
 # square_even = {x : x * x for x in range(1, 11) if x % 2 == 0}
 
 # print(square_even)
+
 #############################################################################
 
 #When the keys overlap, then the second dictionary will be counted
@@ -464,7 +472,9 @@
 # c = a | b
 
 # print(c)
-##############################################################################
+
+#################################################################################
+
 # # student= [
 # #     ("Software", "Shams"),
 # #     ("AI", "Raaju"),
@@ -481,6 +491,7 @@
 # # print(group)
 
 # ################################################################################
+
 # import copy
 # a = {
 #     "Student" : {
@@ -503,6 +514,7 @@
 
 # print(a)
 # print(b)
+
 ##################################################################################
 
 student = {
@@ -510,12 +522,20 @@ student = {
     "Second_Person" : {"Name" : "Raaju", "Marks" : 79},
     "Third_Person" : {"Name" : "Tuhin", "Marks" : 85}
 }
-
 passed_students ={
     key: value["Name"]
-    
     for key, value in student.items()
     if value["Marks"] >= 80
 }
-
 print(passed_students)
+
+##################################################################################
+
+number = [10, 20, 30, 40]
+
+# number.append(50)
+
+number.insert(1, 15)
+number.extend([50, 60])
+
+print(number)
