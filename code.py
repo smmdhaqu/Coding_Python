@@ -539,3 +539,13 @@ number.insert(1, 15)
 number.extend([50, 60])
 
 print(number)
+
+for x in number:
+    print(x)
+
+for  x in range(len(number)):
+    print(x, number[x]) 
+
+
+for index, value in enumerate(number):
+    print(index, value)
