@@ -531,21 +531,46 @@ print(passed_students)
 
 ##################################################################################
 
-number = [10, 20, 30, 40]
+# number = [10, 20, 30, 40]
 
-# number.append(50)
+# # number.append(50)
 
-number.insert(1, 15)
-number.extend([50, 60])
+# number.insert(1, 15)
+# number.extend([50, 60])
 
-print(number)
+# print(number)
 
-for x in number:
-    print(x)
+# for x in number:
+#     print(x)
 
-for  x in range(len(number)):
-    print(x, number[x]) 
+# for  x in range(len(number)):
+#     print(x, number[x]) 
 
 
-for index, value in enumerate(number):
-    print(index, value)
+# for index, value in enumerate(number):
+#     print(index, value)
+
+# a = [1, 2]
+# b = [3, 4]
+
+# print (a + b)
+
+# numbers = [1, 2]
+# print([2] *5)
+
+
+# number = [10, 5, 15, 8]
+
+# evens = [x for x in range(10) if x % 2 == 0]
+# print(evens)   # [0, 2, 4, 6, 8]
+# new_number = sorted(number)
+# print(new_number)
+# print(number)
+
+
+num = [20, 15, "Shams", 30]
+
+for x in range(len(num)):
+    print(x, num[x])
+
+    
