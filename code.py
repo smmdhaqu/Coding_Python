@@ -568,9 +568,16 @@ print(passed_students)
 # print(number)
 
 
-num = [20, 15, "Shams", 30]
+# num = [20, 15, "Shams", 30]
 
-for x in range(len(num)):
-    print(x, num[x])
+# for x in range(len(num)):
+#     print(x, num[x])
 
-    
+# for index, value in enumerate(num):
+#     print(index, value)
+
+
+number = [20, 28, 36, 15, 30]
+#number.sort(reverse=True)
+number.sort()
+print(number)
