@@ -577,7 +577,33 @@ print(passed_students)
 #     print(index, value)
 
 
-number = [20, 28, 36, 15, 30]
-#number.sort(reverse=True)
-number.sort()
-print(number)
+# number = [20, 28, 36, 15, 30]
+# #number.sort(reverse=True)
+# number.sort()
+# print(number)
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+# print (matrix[1])
+# print(matrix[2][2])
+
+# for row in matrix:
+#     for item in row:
+#         print(item, end= " ")
+
+# #matrix = [[0] * 3] * 3
+# print(matrix)
+
+# matrix = [[0] * 3] * 3
+# print(matrix)
+# matrix = [[0] * 3 for _ in range(3)]
+# matrix[0][0] = 99
+# print(matrix)
+
+for row in matrix:
+    for item in row:
+        print(item, end = " ")
