@@ -604,6 +604,11 @@ matrix = [
 # matrix[0][0] = 99
 # print(matrix)
 
-for row in matrix:
-    for item in row:
-        print(item, end = " ")
+# for row in matrix:
+#     for item in row:
+#         print(item, end = " ")
+
+
+for rows in matrix:
+    for elements in rows:
+        print(elements, end = " ")
