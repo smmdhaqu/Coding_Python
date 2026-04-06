@@ -614,15 +614,41 @@ matrix = [
 #         print(elements, end = " ")
 
 
-from array import array
+# from array import array
 
-unsignedint_number = array('I', [10, 20, 8, 17, 32, 29]) #Unsigned Integer contains only the positive values
+# unsignedint_number = array('I', [10, 20, 8, 17, 32, 29]) #Unsigned Integer contains only the positive values
 
-float_number = array('f', [10.3, 20.5, 8.2, 17.8, 32.6, 29.9])
+# float_number = array('f', [10.3, 20.5, 8.2, 17.8, 32.6, 29.9])
 
-# print(unsignedint_number)
+# # print(unsignedint_number)
+# # print(float_number)
+
+# # for x in range(len(float_number)):
+
+# #     print(x, float_number[x])
+
+# for i in range(len(float_number)):
+#     print(f"Index {i} = {float_number[i]}")
+
+# float_number.append(31.6)
 # print(float_number)
 
-for x in range(len(float_number)):
+# float_number.extend([21.5, 19.8])
+# print(float_number)
 
-    print(x, float_number[x])
+
+from array import array
+
+marks = array("i", [59, 78, 69, 87, 75])
+
+print("Total Marks: ")
+
+for x in range(len(marks)):
+    print(f"Index {x} = {marks [x]}")
+
+print("Total Student: ", len(marks))
+print("First Student Marks: ", marks[0])
+
+marks.append(72)
+
+print("After adding the new studnet", marks)
