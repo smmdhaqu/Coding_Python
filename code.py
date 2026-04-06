@@ -609,6 +609,20 @@ matrix = [
 #         print(item, end = " ")
 
 
-for rows in matrix:
-    for elements in rows:
-        print(elements, end = " ")
+# for rows in matrix:
+#     for elements in rows:
+#         print(elements, end = " ")
+
+
+from array import array
+
+unsignedint_number = array('I', [10, 20, 8, 17, 32, 29]) #Unsigned Integer contains only the positive values
+
+float_number = array('f', [10.3, 20.5, 8.2, 17.8, 32.6, 29.9])
+
+# print(unsignedint_number)
+# print(float_number)
+
+for x in range(len(float_number)):
+
+    print(x, float_number[x])
