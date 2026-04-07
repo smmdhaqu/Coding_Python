@@ -581,12 +581,12 @@ print(passed_students)
 # #number.sort(reverse=True)
 # number.sort()
 # print(number)
-
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
+##########################################################################
+# matrix = [
+#     [1, 2, 3],
+#     [4, 5, 6],
+#     [7, 8, 9]
+# ]
 
 # print (matrix[1])
 # print(matrix[2][2])
@@ -612,7 +612,7 @@ matrix = [
 # for rows in matrix:
 #     for elements in rows:
 #         print(elements, end = " ")
-
+#######################################################################
 
 # from array import array
 
@@ -635,20 +635,36 @@ matrix = [
 
 # float_number.extend([21.5, 19.8])
 # print(float_number)
+##############################################################################
+
+# from array import array
+
+# marks = array("i", [59, 78, 69, 87, 75])
+
+# print("Total Marks: ")
+
+# for x in range(len(marks)):
+#     print(f"Index {x} = {marks [x]}")
+
+# print("Total Student: ", len(marks))
+# print("First Student Marks: ", marks[0])
+
+# marks.append(72)
+
+# print("After adding the new studnet", marks)
+##############################################################################
 
 
-from array import array
+my_str = " Learning String "
 
-marks = array("i", [59, 78, 69, 87, 75])
+print(my_str.strip())
 
-print("Total Marks: ")
+name = "Shams"
+department = "Data Science"
 
-for x in range(len(marks)):
-    print(f"Index {x} = {marks [x]}")
+new_string = f"My name is {name} and I'm studying master in {department}"
 
-print("Total Student: ", len(marks))
-print("First Student Marks: ", marks[0])
 
-marks.append(72)
+print(new_string)
 
-print("After adding the new studnet", marks)
+
