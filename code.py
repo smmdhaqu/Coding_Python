@@ -655,16 +655,81 @@ print(passed_students)
 ##############################################################################
 
 
-my_str = " Learning String "
+# my_str = " Learning String "
 
-print(my_str.strip())
+# print(my_str.strip())
 
-name = "Shams"
-department = "Data Science"
+# name = "Shams"
+# department = "Data Science"
 
-new_string = f"My name is {name} and I'm studying master in {department}"
+# new_string = f"My name is {name} and I'm studying master in {department}"
 
 
-print(new_string)
+# print(new_string)
+
+
+# text = "I am learning Python from the scract and wnat to be an expert"
+
+# find_text = text.find("Python")
+
+# print(f"I found the 'Python' at index: {find_text}")
+
+# text = "I am learning Python from the scratch and want to be an expert"
+# find_text = ["Python", "scratch"]
+
+# start = 0
+# while start < len(text):
+#     # Find the next occurrence
+#     index = text.find(find_text, start)
+#     if index == -1:
+#         break  # No more occurrences found
+#     print(f"I found '{find_text}' at index: {index}")
+#     start = index + 1  # Move the starting point to after the found substring
+
+# text = "I am learning Python from the scratch and want to be an expert."
+
+# # List of words to find
+# words_to_find = ['Python', 'scratch', 'expert']
+
+# # Dictionary to store the indexes of each word
+# word_indexes = {word: [] for word in words_to_find}
+
+# # Loop over each word and find all occurrences
+# for word in words_to_find:
+#     start = 0
+#     while start < len(text):
+#         # Find the next occurrence
+#         index = text.find(word, start)
+#         if index == -1:
+#             break  # No more occurrences found
+#         word_indexes[word].append(index)
+#         start = index + 1  # Move the starting point to after the found word
+
+# # Print out the indexes for each word
+# for word, indexes in word_indexes.items():
+#     print(f"'{word}' found at indices: {indexes}")
+
+
+text = "I am learning Python from the scratch and want to be an expert"
+
+find_words = ["Python", "scratch", "expert"]
+
+word_indexes = {word : [] for word in find_words}
+
+for word in find_words:
+    start = 0
+    
+    while start < len(text):
+        index = text.find(word, start)
+
+        if index == -1:
+            break
+        
+        word_indexes[word].append(index)
+        start =index + 1
+
+for word, indexes in word_indexes.items():
+    print(f"'{word}' found in  index: {indexes}")
+
 
 
