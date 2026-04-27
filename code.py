@@ -813,7 +813,20 @@
 # text_to_lower = text.lower()
 
 
-txt = "Writing the Python Script"
+# txt = "Writing the Python Script"
 
-print("Text split [:6] at first, then print [:2]", txt[:6][:4])
+# print("Text split [:6] at first, then print [:2]", txt[:6][:4])
 
+text = "Shams"
+
+text2 = list(text)
+
+print(text)
+
+print(text2)
+
+text2.insert(5, "s")
+
+text = ''. join(text2)
+
+print("Modifid text is: ", text)
