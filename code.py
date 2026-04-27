@@ -517,17 +517,18 @@
 
 ##################################################################################
 
-student = {
-    "First_Person" : {"Name" : "Shams", "Marks" : 81},
-    "Second_Person" : {"Name" : "Raaju", "Marks" : 79},
-    "Third_Person" : {"Name" : "Tuhin", "Marks" : 85}
-}
-passed_students ={
-    key: value["Name"]
-    for key, value in student.items()
-    if value["Marks"] >= 80
-}
-print(passed_students)
+# student = {
+#     "First_Person" : {"Name" : "Shams", "Marks" : 81},
+#     "Second_Person" : {"Name" : "Raaju", "Marks" : 79},
+#     "Third_Person" : {"Name" : "Tuhin", "Marks" : 85}
+# }
+# passed_students ={
+#     key: value["Name"]
+#     for key, value in student.items()
+#     if value["Marks"] >= 80
+# }
+
+# print(passed_students)
 
 ##################################################################################
 
@@ -710,26 +711,109 @@ print(passed_students)
 #     print(f"'{word}' found at indices: {indexes}")
 
 
-text = "I am learning Python from the scratch and want to be an expert"
+# text = "I am learning Python from the scratch and want to be an expert"
 
-find_words = ["Python", "scratch", "expert"]
+# find_words = ["Python", "scratch", "expert"]
 
-word_indexes = {word : [] for word in find_words}
+# word_indexes = {word : [] for word in find_words}
 
-for word in find_words:
-    start = 0
+# for word in find_words:
+#     start = 0
     
-    while start < len(text):
-        index = text.find(word, start)
+#     while start < len(text):
+#         index = text.find(word, start)
 
-        if index == -1:
-            break
+#         if index == -1:
+#             break
         
-        word_indexes[word].append(index)
-        start =index + 1
+#         word_indexes[word].append(index)
+#         start =index + 1
 
-for word, indexes in word_indexes.items():
-    print(f"'{word}' found in  index: {indexes}")
+# for word, indexes in word_indexes.items():
+#     print(f"'{word}' found in  index: {indexes}")
+
+# # মূল টেক্সট
+# text = "I am learning Python from the scratch and want to be an expert."
+
+# # ব্যবহারকারীর input নিন (capital letters-এ দিলে lowercase এ convert হবে)
+# user_input = input("কোন শব্দটি খুঁজতে চান? ").lower()
+
+# # পুরো text কে lowercase-এ convert করুন, যাতে case-insensitive খোঁজা যায়
+# lower_text = text.lower()
+
+# # খুঁজে পাওয়ার জন্য index list
+# indexes = []
+
+# start = 0
+# while start < len(lower_text):
+#     index = lower_text.find(user_input, start)
+#     if index == -1:
+#         break
+#     indexes.append(index)
+#     start = index + 1  # পরবর্তী খোঁজ শুরু করার জন্য
+
+# # ফলাফল দেখানো
+# if indexes:
+#     print(f"'{user_input}' found at indices: {indexes}")
+# else:
+#     print(f"'{user_input}' শব্দটি টেক্সটে পাওয়া যায়নি।")
+
+################################################################################################################
 
 
+# text = "I am learning Python from the scratch and want to be an expert."
+
+# # user input
+# user_input = input("search the name): ")
+
+# words_to_find = [word.strip() for word in user_input.split(",")]
+
+# lower_text = text.lower()
+
+
+# word_indexes = {}
+
+# for word in words_to_find:
+#     search_word = word.lower()   
+#     start = 0
+#     matches = []
+
+#     while start < len(lower_text):
+#         index = lower_text.find(search_word, start)
+
+#         if index == -1:
+#             break
+
+#         original_match = text[index:index + len(search_word)]
+
+#         matches.append((original_match, index))
+
+#         # overlapping match 
+#         start = index + 1
+
+#     word_indexes[word] = matches
+
+# # output
+# for word, matches in word_indexes.items():
+#     if matches:
+#         print(f"\nInput word: '{word}'")
+#         for found_word, index in matches:
+#             print(f"Found '{found_word}' at index {index}")
+#     else:
+#         print(f"\nInput word: '{word}'")
+#         print("Did not find the text")
+
+# text = "I am learning Python from the scratch and want to be an expert."
+
+# user_input = input("Which words do you want to find? Use comma between words")
+
+# input_to_list = [word.strip() for word in user_input.split(",")] 
+
+
+# text_to_lower = text.lower()
+
+
+txt = "Writing the Python Script"
+
+print("Text split [:6] at first, then print [:2]", txt[:6][:4])
 
