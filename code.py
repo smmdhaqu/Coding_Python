@@ -761,73 +761,88 @@
 ################################################################################################################
 
 
-text = "I am learning Python from the scratch and want to be an expert."
+# text = "I am learning Python from the scratch and want to be an expert."
 
-# user input
-user_input = input("Search the new words): ")
+# # user input
+# user_input = input("Search the new words): ")
 
-words_to_find = [word.strip() for word in user_input.split(",")]
+# words_to_find = [word.strip() for word in user_input.split(",")]
 
-lower_text = text.lower()
-
-
-word_indexes = {}
-
-for word in words_to_find:
-    search_word = word.lower()   
-    start = 0
-    matches = []
-
-    while start < len(lower_text):
-        index = lower_text.find(search_word, start)
-
-        if index == -1:
-            break
-
-        original_match = text[index:index + len(search_word)]
-
-        matches.append((original_match, index))
-
-        # overlapping match 
-        start = index + 1
-
-    word_indexes[word] = matches
-
-# output
-for word, matches in word_indexes.items():
-    if matches:
-        print(f"\nInput word: '{word}'")
-        for found_word, index in matches:
-            print(f"Found '{found_word}' at index {index}")
-    else:
-        print(f"\nInput word: '{word}'")
-        print("Did not find the text")
-
-text = "I am learning Python from the scratch and want to be an expert."
-
-user_input = input("Which words do you want to find? Use comma between words")
-
-input_to_list = [word.strip() for word in user_input.split(",")] 
+# lower_text = text.lower()
 
 
-text_to_lower = text.lower()
+# word_indexes = {}
+
+# for word in words_to_find:
+#     search_word = word.lower()   
+#     start = 0
+#     matches = []
+
+#     while start < len(lower_text):
+#         index = lower_text.find(search_word, start)
+
+#         if index == -1:
+#             break
+
+#         original_match = text[index:index + len(search_word)]
+
+#         matches.append((original_match, index))
+
+#         # overlapping match 
+#         start = index + 1
+
+#     word_indexes[word] = matches
+
+# # output
+# for word, matches in word_indexes.items():
+#     if matches:
+#         print(f"\nInput word: '{word}'")
+#         for found_word, index in matches:
+#             print(f"Found '{found_word}' at index {index}")
+#     else:
+#         print(f"\nInput word: '{word}'")
+#         print("Did not find the text")
+
+# text = "I am learning Python from the scratch and want to be an expert."
+
+# user_input = input("Which words do you want to find? Use comma between words")
+
+# input_to_list = [word.strip() for word in user_input.split(",")] 
 
 
-# txt = "Writing the Python Script"
+# text_to_lower = text.lower()
 
-# print("Text split [:6] at first, then print [:2]", txt[:6][:4])
 
-text = "Shams"
+# # txt = "Writing the Python Script"
 
-text2 = list(text)
+# # print("Text split [:6] at first, then print [:2]", txt[:6][:4])
 
-print(text)
+# text = "Shams"
 
-print(text2)
+# text2 = list(text)
 
-text2.insert(5, "s")
+# print(text)
 
-text = ''. join(text2)
+# print(text2)
 
-print("Modifid text is: ", text)
+# text2.insert(5, "s")
+
+# text = ''. join(text2)
+
+# print("Modifid text is: ", text)
 #####################################################################################################
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def introduction(self):
+        print(f"The person name is {self.name} and he is {self.age} years old")
+
+person1 = Person("Shams", 27)
+person2 = Person("Raaju", 26)
+
+person1.introduction()
+person2.introduction()
+        
