@@ -851,15 +851,33 @@
 class Account:
     def __init__(self, owner_name, currenr_balance):
         self.owner_name = owner_name
-        self.current_balance = currenr_balance
+        self.__current_balance = currenr_balance
     
 
     def display_info(self):
         print("The account holder name is: ", self.owner_name)
-        print("His account balance is now: $", self.current_balance)
+        print("His account balance is now: $", self.__current_balance)
+
+    
+    def get_balance(self):
+        return self.__current_balance
+
+
+    def set_balance(self, amount):
+        if amount < 0:
+            print("Account balance can not be less than 0")
+        else:
+            self.__current_balance = amount
+
 
 my_account = Account ("Shams", 5000)
+
 my_account.display_info()
 
+
+my_account.set_balance(500)
+my_account.set_balance(-500)
+
+print("The Updated Balance is: $", my_account.get_balance())
 
         
