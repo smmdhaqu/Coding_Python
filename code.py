@@ -832,17 +832,34 @@
 # print("Modifid text is: ", text)
 #####################################################################################################
 
-class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
     
-    def introduction(self):
-        print(f"The person name is {self.name} and he is {self.age} years old")
+#     def introduction(self):
+#         print(f"The person name is {self.name} and he is {self.age} years old")
 
-person1 = Person("Shams", 27)
-person2 = Person("Raaju", 26)
+# person1 = Person("Shams", 27)
+# person2 = Person("Raaju", 26)
 
-person1.introduction()
-person2.introduction()
+# person1.introduction()
+# person2.introduction()
+
+
+
+class Account:
+    def __init__(self, owner_name, currenr_balance):
+        self.owner_name = owner_name
+        self.current_balance = currenr_balance
+    
+
+    def display_info(self):
+        print("The account holder name is: ", self.owner_name)
+        print("His account balance is now: $", self.current_balance)
+
+my_account = Account ("Shams", 5000)
+my_account.display_info()
+
+
         
