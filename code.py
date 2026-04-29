@@ -848,36 +848,75 @@
 
 
 
-class Account:
-    def __init__(self, owner_name, currenr_balance):
-        self.owner_name = owner_name
-        self.__current_balance = currenr_balance
+# class Account:
+#     def __init__(self, owner_name, currenr_balance):
+#         self.owner_name = owner_name
+#         self.__current_balance = currenr_balance
     
+
+#     def display_info(self):
+#         print("The account holder name is: ", self.owner_name)
+#         print("His account balance is now: $", self.__current_balance)
+
+    
+#     def get_balance(self):
+#         return self.__current_balance
+
+
+#     def set_balance(self, amount):
+#         if amount < 0:
+#             print("Account balance can not be less than 0")
+#         else:
+#             self.__current_balance = amount
+
+
+# my_account = Account ("Shams", 5000)
+
+# my_account.display_info()
+
+
+# my_account.set_balance(500)
+# my_account.set_balance(-500)
+
+# print("The Updated Balance is: $", my_account.get_balance())
+
+
+######################################################################################################
+
+class Account:
+    def __init__(self, account_owner, account_balance= 0):
+        self.account_owner = account_owner
+        self.__account_balance = account_balance
+
+    def withdraw (self, amount):
+        if 0 < amount <= self.__account_balance:
+            self.__account_balance -= amount
+            print(f"Withdraw amount was ${amount} and now account balance remains ${self.__account_balance}")
+        else:
+            print("Insufficient balance or Invalid amount")
+
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.__account_balance += amount
+            print(f"Deposit amount is {amount}, now your balance is {self.__account_balance}")
+        else:
+            print("You gave the wrong amount")
+
+
+    def final_balance(self):
+        return self.__account_balance
 
     def display_info(self):
-        print("The account holder name is: ", self.owner_name)
-        print("His account balance is now: $", self.__current_balance)
+        print(f"The account holder name is {self.account_owner}")
+        print(f"Account balance is: {self.__account_balance}")
 
-    
-    def get_balance(self):
-        return self.__current_balance
-
-
-    def set_balance(self, amount):
-        if amount < 0:
-            print("Account balance can not be less than 0")
-        else:
-            self.__current_balance = amount
-
-
-my_account = Account ("Shams", 5000)
+my_account = Account("Shams Ahmed", 5000)
 
 my_account.display_info()
 
+my_account.withdraw(500)
 
-my_account.set_balance(500)
-my_account.set_balance(-500)
+my_account.deposit(1000)
 
-print("The Updated Balance is: $", my_account.get_balance())
-
-        
+print("Now your account balance is", my_account.final_balance())
