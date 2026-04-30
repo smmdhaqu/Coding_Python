@@ -984,3 +984,37 @@ print("Final balance:", account.get_balance())
 
 #####################################################################################################
 
+class BankAccount:
+    def __init__ (self, account_name, account_balance= 0):
+        self.account_name = account_name
+        self.__account_balance = account_balance
+
+
+    def set_balance(self, account_balance):
+        if account_balance >= 0:
+            print(f"Account Balance updated to &{self.__account_balance}")
+        else:
+            print("You may entered the negative or wrong amount.")
+
+    def deposit_balance(self, amount):
+        if amount > 0:
+            self.__account_balance += amount
+            print(f"Your diposit amount was {amount}, now your balance is {self.__account_balance}")
+        else:
+            print("Plese enter the positive number")
+    
+    def withdraw_balance(self, amount):
+        if 0 < amount <= self.__account_balance:
+            self.__account_balance -= amount
+            print("The amount ") 
+
+
+diposit_amount= float(input("Please enter the diposit money: "))
+account.deposit_balance(diposit_amount)
+
+
+account_name = input("Enter your Name: ")
+
+inset_amount = float(input(f"Enter the amount for the {account_name}: $"))
+
+account = BankAccount(account_name, inset_amount)
