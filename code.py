@@ -1021,45 +1021,106 @@
 ##############################################################################################################################
 #################################### Inheritance #############################################################################
 
-class Vichel:
-    def __init__(self, speed, type):
-        self.speed = speed
-        self.type = type
+# class Vichel:
+#     def __init__(self, speed, type):
+#         self.speed = speed
+#         self.type = type
     
 
-    def display_info(self):
-        print(f"It is running with {self.speed} km/h.")
-        print(f"It is a {self.type}.")
+#     def display_info(self):
+#         print(f"It is running with {self.speed} km/h.")
+#         print(f"It is a {self.type}.")
 
-class Car (Vichel):
-    def __init__(self, speed, type, brand):
-        super().__init__(speed, type)
-        self.brand = brand
+# class Car (Vichel):
+#     def __init__(self, speed, type, brand):
+#         super().__init__(speed, type)
+#         self.brand = brand
 
-    def display_info(self):
-        super().display_info()
-        print(f"The brand of the {self.type} is a {self.brand}.")
+#     def display_info(self):
+#         super().display_info()
+#         print(f"The brand of the {self.type} is a {self.brand}.")
 
-# my_car = Car(200, "Car", "Marcedes Benz")
+# # my_car = Car(200, "Car", "Marcedes Benz")
+
+# # my_car.display_info()
+
+# class Electric_Car(Car):
+#     def __init__(self, speed, type, brand, battery_capacity):
+#         super().__init__(speed, type, brand)
+#         self.battery_capacity = battery_capacity
+
+#     def display_info(self):
+#         super().display_info()
+#         print(f"The {self.type} called {self.brand} has a battery_capacity of {self.battery_capacity} kw.")
+
+
+# type = input("What type of Vichle is it? ")
+# brand = input("Which brand is the Vichele? ")
+# battery_capacity = float(input("What is the battery capacity of this vichele? "))
+# speed = float(input("What is the maximum speed of the Vichle: "))
+
+
+# my_car = Electric_Car(speed, type, brand, battery_capacity)
 
 # my_car.display_info()
 
-class Electric_Car(Car):
-    def __init__(self, speed, type, brand, battery_capacity):
-        super().__init__(speed, type, brand)
-        self.battery_capacity = battery_capacity
+################################################################################################
+
+class Vehicle:
+    def __init__(self, speed, fuel_capacity):
+        self.speed = speed
+        self.__fuel_capacity = fuel_capacity
+    
+    def get_capacity(self):
+        return self.__fuel_capacity
+    
+    def set_capacity(self, fuel_capacity):
+        if fuel_capacity > 0:
+            self.__fuel_capacity = fuel_capacity
+            print(f"Your set fuel capacity was {self.__fuel_capacity} liters")
+        else:
+            print("Capacity must be positive.")
+
+    def display_info(self):
+        print(f"Speed is: {self.speed} km/h")
+        print(f"Fuel Capacity: {self.get_capacity()} liters")
+
+class Car (Vehicle):
+    def __init__(self, speed, fuel_capacity, car_brand):
+        super().__init__(speed, fuel_capacity)
+        self.car_brand = car_brand
 
     def display_info(self):
         super().display_info()
-        print(f"The {self.type} called {self.brand} has a battery_capacity of {self.battery_capacity} kw.")
+        print(f"The brand of the Car is: {self.car_brand}")
 
-type = input("What type of Vichle is it? ")
-brand = input("Which brand is the Vichele? ")
-battery_capacity = float(input("What is the battery capacity of this vichele? "))
-speed = float(input("What is the maximum speed of the Vichle: "))
+class Truck(Vehicle):
+    def __init__(self, speed, fuel_capacity, load_capacity):
+        super().__init__(speed, fuel_capacity)
+        self.load_capacity = load_capacity
+    
+    def display_info(self):
+        super().display_info()
+        print(f"The truck can carry upto {self.load_capacity} tons")
 
+vehicle_type = input("Enter the Vehicle type (Car/Truck): ").lower()
+if vehicle_type == "car":
+    car_brand = input("What is the Brand of the Car? ")
+    fuel_capacity = float(input("How much fuel can be carried the Car? "))
+    speed = float(input("Enter the maximum speed of the Car: "))
+    my_car = Car(speed, fuel_capacity, car_brand)
+    my_car.display_info()
 
+elif vehicle_type == "truck":
+    fuel_capacity = float(input("How much fuel can be carried the Truck? "))
+    speed = float(input("Enter the maximum speed of the Truck: "))
+    load_capacity = float(input("Enter the highest Load Capacity: "))
+    my_truck = Truck(speed, fuel_capacity, load_capacity)
+    my_truck.display_info()
 
-my_car = Electric_Car(speed, type, brand, battery_capacity)
+else:
+    print("Invalid Vehicle type!")
 
-my_car.display_info()
+#######################################################################################################################################
+
+        
