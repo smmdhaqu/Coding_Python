@@ -1040,6 +1040,19 @@ class Car (Vichel):
         super().display_info()
         print(f"The brand of the {self.type} is a {self.brand}.")
 
-my_car = Car(200, "Car", "Marcedes Benz")
+# my_car = Car(200, "Car", "Marcedes Benz")
+
+# my_car.display_info()
+
+class Electric_Car(Car):
+    def __init__(self, speed, type, brand, battery_capacity):
+        super().__init__(speed, type, brand)
+        self.battery_capacity = battery_capacity
+
+    def display_info(self):
+        super().display_info()
+        print(f"The {self.type} called {self.brand} has a battery_capacity of {self.battery_capacity} kw.")
+
+my_car = Electric_Car(200, "Car", "Marcedes Benz", 5000)
 
 my_car.display_info()
