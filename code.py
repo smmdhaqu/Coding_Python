@@ -1053,6 +1053,13 @@ class Electric_Car(Car):
         super().display_info()
         print(f"The {self.type} called {self.brand} has a battery_capacity of {self.battery_capacity} kw.")
 
-my_car = Electric_Car(200, "Car", "Marcedes Benz", 5000)
+type = input("What type of Vichle is it? ")
+brand = input("Which brand is the Vichele? ")
+battery_capacity = float(input("What is the battery capacity of this vichele? "))
+speed = float(input("What is the maximum speed of the Vichle: "))
+
+
+
+my_car = Electric_Car(speed, type, brand, battery_capacity)
 
 my_car.display_info()
