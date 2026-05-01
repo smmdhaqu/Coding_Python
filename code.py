@@ -923,98 +923,123 @@
 
 
 
-class BankAccount:
-    def __init__(self, owner, balance=0):
-        self.owner = owner
-        self.__balance = balance  # private attribute
+# class BankAccount:
+#     def __init__(self, owner, balance=0):
+#         self.owner = owner
+#         self.__balance = balance  # private attribute
 
     
-    def get_balance(self):
-        return self.__balance
+#     def get_balance(self):
+#         return self.__balance
 
     
-    def set_balance(self, balance):
-        if balance >= 0:
-            self.__balance = balance
-            print(f"Balance updated to: ${self.__balance}")
-        else:
-            print("Balance can't be negative!")
+#     def set_balance(self, balance):
+#         if balance >= 0:
+#             self.__balance = balance
+#             print(f"Balance updated to: ${self.__balance}")
+#         else:
+#             print("Balance can't be negative!")
 
     
-    def deposit(self, amount):
-        if amount > 0:
-            self.__balance += amount
-            print(f"Deposited ${amount}. New balance: ${self.__balance}")
-        else:
-            print("Deposit amount must be positive!")
+#     def deposit(self, amount):
+#         if amount > 0:
+#             self.__balance += amount
+#             print(f"Deposited ${amount}. New balance: ${self.__balance}")
+#         else:
+#             print("Deposit amount must be positive!")
 
     
-    def withdraw(self, amount):
-        if 0 < amount <= self.__balance:
-            self.__balance -= amount
-            print(f"Withdrew ${amount}. Remaining balance: ${self.__balance}")
-        else:
-            print("Insufficient funds or invalid amount!")
+#     def withdraw(self, amount):
+#         if 0 < amount <= self.__balance:
+#             self.__balance -= amount
+#             print(f"Withdrew ${amount}. Remaining balance: ${self.__balance}")
+#         else:
+#             print("Insufficient funds or invalid amount!")
 
-    def display_info(self):
-        print(f"Account owner: {self.owner}")
-        print(f"Account balance: ${self.__balance}")
-
-
-owner = input("Enter account owner's name: ")
-initial_balance = float(input(f"Enter initial balance for {owner}: $"))
+#     def display_info(self):
+#         print(f"Account owner: {self.owner}")
+#         print(f"Account balance: ${self.__balance}")
 
 
-account = BankAccount(owner, initial_balance)
+# owner = input("Enter account owner's name: ")
+# initial_balance = float(input(f"Enter initial balance for {owner}: $"))
 
 
-account.display_info()
+# account = BankAccount(owner, initial_balance)
 
 
-deposit_amount = float(input("Enter amount to deposit: $"))
-account.deposit(deposit_amount)
+# account.display_info()
 
 
-withdraw_amount = float(input("Enter amount to withdraw: $"))
-account.withdraw(withdraw_amount)
+# deposit_amount = float(input("Enter amount to deposit: $"))
+# account.deposit(deposit_amount)
 
 
-print("Final balance:", account.get_balance())
+# withdraw_amount = float(input("Enter amount to withdraw: $"))
+# account.withdraw(withdraw_amount)
+
+
+# print("Final balance:", account.get_balance())
 
 
 #####################################################################################################
 
-class BankAccount:
-    def __init__ (self, account_name, account_balance= 0):
-        self.account_name = account_name
-        self.__account_balance = account_balance
+# class BankAccount:
+#     def __init__ (self, account_name, account_balance= 0):
+#         self.account_name = account_name
+#         self.__account_balance = account_balance
 
 
-    def set_balance(self, account_balance):
-        if account_balance >= 0:
-            print(f"Account Balance updated to &{self.__account_balance}")
-        else:
-            print("You may entered the negative or wrong amount.")
+#     def set_balance(self, account_balance):
+#         if account_balance >= 0:
+#             print(f"Account Balance updated to &{self.__account_balance}")
+#         else:
+#             print("You may entered the negative or wrong amount.")
 
-    def deposit_balance(self, amount):
-        if amount > 0:
-            self.__account_balance += amount
-            print(f"Your diposit amount was {amount}, now your balance is {self.__account_balance}")
-        else:
-            print("Plese enter the positive number")
+#     def deposit_balance(self, amount):
+#         if amount > 0:
+#             self.__account_balance += amount
+#             print(f"Your diposit amount was {amount}, now your balance is {self.__account_balance}")
+#         else:
+#             print("Plese enter the positive number")
     
-    def withdraw_balance(self, amount):
-        if 0 < amount <= self.__account_balance:
-            self.__account_balance -= amount
-            print("The amount ") 
+#     def withdraw_balance(self, amount):
+#         if 0 < amount <= self.__account_balance:
+#             self.__account_balance -= amount
+#             print("The amount ") 
 
 
-diposit_amount= float(input("Please enter the diposit money: "))
-account.deposit_balance(diposit_amount)
+# diposit_amount= float(input("Please enter the diposit money: "))
+# account.deposit_balance(diposit_amount)
 
 
-account_name = input("Enter your Name: ")
+# account_name = input("Enter your Name: ")
 
-inset_amount = float(input(f"Enter the amount for the {account_name}: $"))
+# inset_amount = float(input(f"Enter the amount for the {account_name}: $"))
 
-account = BankAccount(account_name, inset_amount)
+# account = BankAccount(account_name, inset_amount)
+##############################################################################################################################
+#################################### Inheritance #############################################################################
+
+class Vichel:
+    def __init__(self, speed, type):
+        self.speed = speed
+        self.type = type
+    
+
+    def display_info(self):
+        print(f"It is running with {self.speed} km/h.")
+        print(f"It is a {self.type}.")
+
+class Car (Vichel):
+    def __init__(self, speed, type, brand):
+        super().__init__(speed, type)
+        self.brand = brand
+
+    def display_info(self):
+        super().display_info()
+        print(f"The brand of the {self.type} is a {self.brand}.")
+
+my_car = Car(200, "Car", "Marcedes Benz")
+
+my_car.display_info()
