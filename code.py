@@ -1066,61 +1066,96 @@
 
 ################################################################################################
 
-class Vehicle:
-    def __init__(self, speed, fuel_capacity):
-        self.speed = speed
-        self.__fuel_capacity = fuel_capacity
+# class Vehicle:
+#     def __init__(self, speed, fuel_capacity):
+#         self.speed = speed
+#         self.__fuel_capacity = fuel_capacity
     
-    def get_capacity(self):
-        return self.__fuel_capacity
+#     def get_capacity(self):
+#         return self.__fuel_capacity
     
-    def set_capacity(self, fuel_capacity):
-        if fuel_capacity > 0:
-            self.__fuel_capacity = fuel_capacity
-            print(f"Your set fuel capacity was {self.__fuel_capacity} liters")
-        else:
-            print("Capacity must be positive.")
+#     def set_capacity(self, fuel_capacity):
+#         if fuel_capacity > 0:
+#             self.__fuel_capacity = fuel_capacity
+#             print(f"Your set fuel capacity was {self.__fuel_capacity} liters")
+#         else:
+#             print("Capacity must be positive.")
 
-    def display_info(self):
-        print(f"Speed is: {self.speed} km/h")
-        print(f"Fuel Capacity: {self.get_capacity()} liters")
+#     def display_info(self):
+#         print(f"Speed is: {self.speed} km/h")
+#         print(f"Fuel Capacity: {self.__fuel_capacity} liters") # This is also correct -> self.get_capacity()
 
-class Car (Vehicle):
-    def __init__(self, speed, fuel_capacity, car_brand):
-        super().__init__(speed, fuel_capacity)
-        self.car_brand = car_brand
+# class Car (Vehicle):
+#     def __init__(self, speed, fuel_capacity, car_brand):
+#         super().__init__(speed, fuel_capacity)
+#         self.car_brand = car_brand
 
-    def display_info(self):
-        super().display_info()
-        print(f"The brand of the Car is: {self.car_brand}")
+#     def display_info(self):
+#         super().display_info()
+#         print(f"The brand of the Car is: {self.car_brand}")
 
-class Truck(Vehicle):
-    def __init__(self, speed, fuel_capacity, load_capacity):
-        super().__init__(speed, fuel_capacity)
-        self.load_capacity = load_capacity
+# class Truck(Vehicle):
+#     def __init__(self, speed, fuel_capacity, load_capacity):
+#         super().__init__(speed, fuel_capacity)
+#         self.load_capacity = load_capacity
     
-    def display_info(self):
-        super().display_info()
-        print(f"The truck can carry upto {self.load_capacity} tons")
+#     def display_info(self):
+#         super().display_info()
+#         print(f"The truck can carry upto {self.load_capacity} tons")
 
-vehicle_type = input("Enter the Vehicle type (Car/Truck): ").lower()
-if vehicle_type == "car":
-    car_brand = input("What is the Brand of the Car? ")
-    fuel_capacity = float(input("How much fuel can be carried the Car? "))
-    speed = float(input("Enter the maximum speed of the Car: "))
-    my_car = Car(speed, fuel_capacity, car_brand)
-    my_car.display_info()
+# vehicle_type = input("Enter the Vehicle type (Car/Truck): ").lower()
+# if vehicle_type == "car":
+#     car_brand = input("What is the Brand of the Car? ")
+#     fuel_capacity = float(input("How much fuel can be carried the Car? "))
+#     speed = float(input("Enter the maximum speed of the Car: "))
+#     my_car = Car(speed, fuel_capacity, car_brand)
+#     my_car.display_info()
 
-elif vehicle_type == "truck":
-    fuel_capacity = float(input("How much fuel can be carried the Truck? "))
-    speed = float(input("Enter the maximum speed of the Truck: "))
-    load_capacity = float(input("Enter the highest Load Capacity: "))
-    my_truck = Truck(speed, fuel_capacity, load_capacity)
-    my_truck.display_info()
+# elif vehicle_type == "truck":
+#     fuel_capacity = float(input("How much fuel can be carried the Truck? "))
+#     speed = float(input("Enter the maximum speed of the Truck: "))
+#     load_capacity = float(input("Enter the highest Load Capacity: "))
+#     my_truck = Truck(speed, fuel_capacity, load_capacity)
+#     my_truck.display_info()
 
-else:
-    print("Invalid Vehicle type!")
+# else:
+#     print("Invalid Vehicle type!")
 
 #######################################################################################################################################
 
-        
+from abc import ABC, abstractmethod
+
+#Abstract Class
+class BankAccount(ABC):
+    @abstractmethod
+
+    def deposit(self, money):
+        pass
+
+    @abstractmethod
+
+    def withdraw(self, money):
+        pass
+
+#Subclass
+
+class SavingAccount(BankAccount):
+    def __init__(self, balance_money = 0):
+        self.balance_money = balance_money
+
+    def deposit(self, money):
+        self.balance_money += money
+        print(f"You deposited {money}, Now your balace is {self.balance_money}")
+
+
+    def withdraw (self, money):
+        if money <= self.balance_money:
+            self.balance_money -= money
+            print(f"You withdraw {money}, Now you your balance is {self.balance_money}")
+        else:
+            print("Invalid or Negative Number")
+
+
+saving = SavingAccount(5000)
+saving.deposit(1000)
+saving.withdraw(500)
