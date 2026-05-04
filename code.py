@@ -1160,34 +1160,79 @@
 # saving.deposit(1000)
 # saving.withdraw(500)
 
-from abc import ABC, abstractmethod
+# from abc import ABC, abstractmethod
 
 
-class Person(ABC):
-    @abstractmethod
+# class Person(ABC):
+#     @abstractmethod
 
-    def description(self):
-        pass
+#     def description(self):
+#         pass
 
-class Student(Person):
-    def __init__(self, name, grade):
-        self.name = name
-        self.grade = grade
+# class Student(Person):
+#     def __init__(self, name, grade):
+#         self.name = name
+#         self.grade = grade
     
-    def description(self):
-        return f"The student name is {self.name} and his grade is: {self.grade}"
+#     def description(self):
+#         return f"The student name is {self.name} and his grade is: {self.grade}"
     
-class Teacher(Person):
-    def __init__(self, name, subject):
-        self.name = name
-        self.subject = subject 
+# class Teacher(Person):
+#     def __init__(self, name, subject):
+#         self.name = name
+#         self.subject = subject 
 
-    def description(self):
-        return f"Teacher name is {self.name}, he teaches {self.subject}"
+#     def description(self):
+#         return f"Teacher name is {self.name}, he teaches {self.subject}"
 
 
-student_info = Student("Shams", 3.5)
-teacher_info = Teacher("Raaju", "Math")
+# student_info = Student("Shams", 3.5)
+# teacher_info = Teacher("Raaju", "Math")
 
-print(student_info.description())
-print(teacher_info.description())
+# print(student_info.description())
+# print(teacher_info.description())
+
+# class Vehicle:
+#     def wheels(self):
+#         raise NotImplementedError
+
+# class Car(Vehicle):
+#     def wheels(self):
+#         return "Most of the car has 4 Wheels"
+    
+# class Truck(Vehicle):
+#     def wheels(self):
+#         return "Truck has more than 4 Wheels"
+
+# car = Car()
+# truck = Truck()
+
+
+# def display_wheels(vehicle):
+#     print(vehicle.wheels())
+
+# display_wheels(car)
+# display_wheels(truck)
+
+class Payment:
+    def payment_method(self):
+        raise NotImplementedError
+
+class Paypal(Payment):
+    def payment_method(self):
+        return "Payment done by Paypal."
+
+class CreditCard(Payment):
+    def payment_method(self):
+        return "Credit Card is used to pay the bill."
+    
+
+paypal = Paypal()
+creditcard = CreditCard()
+
+def show_payment(payment):
+    print(payment.payment_method())
+
+show_payment(paypal)
+show_payment(creditcard)
+
