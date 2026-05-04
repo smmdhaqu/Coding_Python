@@ -1226,13 +1226,17 @@ class CreditCard(Payment):
     def payment_method(self):
         return "Credit Card is used to pay the bill."
     
-
-paypal = Paypal()
-creditcard = CreditCard()
-
 def show_payment(payment):
     print(payment.payment_method())
 
-show_payment(paypal)
-show_payment(creditcard)
+user_input = input("Enter the Payment methode between PayPal and Credit Card: ").lower()
+
+if user_input == "PayPal":
+    paypal = Paypal()
+    show_payment(paypal)
+
+elif user_input == "Credit Card":
+    creditcard = CreditCard()
+    show_payment(creditcard)
+
 
