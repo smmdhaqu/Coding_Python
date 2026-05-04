@@ -1231,12 +1231,14 @@ def show_payment(payment):
 
 user_input = input("Enter the Payment methode between PayPal and Credit Card: ").lower()
 
-if user_input == "PayPal":
+if user_input == "paypal":
     paypal = Paypal()
     show_payment(paypal)
 
-elif user_input == "Credit Card":
+elif user_input == "credit card":
     creditcard = CreditCard()
     show_payment(creditcard)
+else:
+    print("Invalid Payment")
 
 
