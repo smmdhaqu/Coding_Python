@@ -1123,39 +1123,71 @@
 
 #######################################################################################################################################
 
+# from abc import ABC, abstractmethod
+
+# #Abstract Class
+# class BankAccount(ABC):
+#     @abstractmethod
+
+#     def deposit(self, money):
+#         pass
+
+#     @abstractmethod
+
+#     def withdraw(self, money):
+#         pass
+
+# #Subclass
+
+# class SavingAccount(BankAccount):
+#     def __init__(self, balance_money = 0):
+#         self.balance_money = balance_money
+
+#     def deposit(self, money):
+#         self.balance_money += money
+#         print(f"You deposited {money}, Now your balace is {self.balance_money}")
+
+
+#     def withdraw (self, money):
+#         if money <= self.balance_money:
+#             self.balance_money -= money
+#             print(f"You withdraw {money}, Now you your balance is {self.balance_money}")
+#         else:
+#             print("Invalid or Negative Number")
+
+
+# saving = SavingAccount(5000)
+# saving.deposit(1000)
+# saving.withdraw(500)
+
 from abc import ABC, abstractmethod
 
-#Abstract Class
-class BankAccount(ABC):
+
+class Person(ABC):
     @abstractmethod
 
-    def deposit(self, money):
+    def description(self):
         pass
 
-    @abstractmethod
+class Student(Person):
+    def __init__(self, name, grade):
+        self.name = name
+        self.grade = grade
+    
+    def description(self):
+        return f"The student name is {self.name} and his grade is: {self.grade}"
+    
+class Teacher(Person):
+    def __init__(self, name, subject):
+        self.name = name
+        self.subject = subject 
 
-    def withdraw(self, money):
-        pass
-
-#Subclass
-
-class SavingAccount(BankAccount):
-    def __init__(self, balance_money = 0):
-        self.balance_money = balance_money
-
-    def deposit(self, money):
-        self.balance_money += money
-        print(f"You deposited {money}, Now your balace is {self.balance_money}")
-
-
-    def withdraw (self, money):
-        if money <= self.balance_money:
-            self.balance_money -= money
-            print(f"You withdraw {money}, Now you your balance is {self.balance_money}")
-        else:
-            print("Invalid or Negative Number")
+    def description(self):
+        return f"Teacher name is {self.name}, he teaches {self.subject}"
 
 
-saving = SavingAccount(5000)
-saving.deposit(1000)
-saving.withdraw(500)
+student_info = Student("Shams", 3.5)
+teacher_info = Teacher("Raaju", "Math")
+
+print(student_info.description())
+print(teacher_info.description())
