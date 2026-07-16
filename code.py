@@ -1066,60 +1066,60 @@
 
 ################################################################################################
 
-class Vehicle:
-    def __init__(self, speed, fuel_capacity):
-        self.speed = speed
-        self.__fuel_capacity = fuel_capacity
+# class Vehicle:
+#     def __init__(self, speed, fuel_capacity):
+#         self.speed = speed
+#         self.__fuel_capacity = fuel_capacity
     
-    def get_capacity(self):
-        return self.__fuel_capacity
+#     def get_capacity(self):
+#         return self.__fuel_capacity
     
-    def set_capacity(self, fuel_capacity):
-        if fuel_capacity > 0:
-            self.__fuel_capacity = fuel_capacity
-            print(f"Your set fuel capacity was {self.__fuel_capacity} liters")
-        else:
-            print("Capacity must be positive.")
+#     def set_capacity(self, fuel_capacity):
+#         if fuel_capacity > 0:
+#             self.__fuel_capacity = fuel_capacity
+#             print(f"Your set fuel capacity was {self.__fuel_capacity} liters")
+#         else:
+#             print("Capacity must be positive.")
 
-    def display_info(self):
-        print(f"Speed is: {self.speed} km/h")
-        print(f"Fuel Capacity: {self.__fuel_capacity} liters") # This is also correct -> self.get_capacity()
+#     def display_info(self):
+#         print(f"Speed is: {self.speed} km/h")
+#         print(f"Fuel Capacity: {self.__fuel_capacity} liters") # This is also correct -> self.get_capacity()
 
-class Car (Vehicle):
-    def __init__(self, speed, fuel_capacity, car_brand):
-        super().__init__(speed, fuel_capacity)
-        self.car_brand = car_brand
+# class Car (Vehicle):
+#     def __init__(self, speed, fuel_capacity, car_brand):
+#         super().__init__(speed, fuel_capacity)
+#         self.car_brand = car_brand
 
-    def display_info(self):
-        super().display_info()
-        print(f"The brand of the Car is: {self.car_brand}")
+#     def display_info(self):
+#         super().display_info()
+#         print(f"The brand of the Car is: {self.car_brand}")
 
-class Truck(Vehicle):
-    def __init__(self, speed, fuel_capacity, load_capacity):
-        super().__init__(speed, fuel_capacity)
-        self.load_capacity = load_capacity
+# class Truck(Vehicle):
+#     def __init__(self, speed, fuel_capacity, load_capacity):
+#         super().__init__(speed, fuel_capacity)
+#         self.load_capacity = load_capacity
     
-    def display_info(self):
-        super().display_info()
-        print(f"The truck can carry upto {self.load_capacity} tons")
+#     def display_info(self):
+#         super().display_info()
+#         print(f"The truck can carry upto {self.load_capacity} tons")
 
-vehicle_type = input("Enter the Vehicle type (Car/Truck): ").lower()
-if vehicle_type == "car":
-    car_brand = input("What is the Brand of the Car? ")
-    fuel_capacity = float(input("How much fuel can be carried the Car? "))
-    speed = float(input("Enter the maximum speed of the Car: "))
-    my_car = Car(speed, fuel_capacity, car_brand)
-    my_car.display_info()
+# vehicle_type = input("Enter the Vehicle type (Car/Truck): ").lower()
+# if vehicle_type == "car":
+#     car_brand = input("What is the Brand of the Car? ")
+#     fuel_capacity = float(input("How much fuel can be carried the Car? "))
+#     speed = float(input("Enter the maximum speed of the Car: "))
+#     my_car = Car(speed, fuel_capacity, car_brand)
+#     my_car.display_info()
 
-elif vehicle_type == "truck":
-    fuel_capacity = float(input("How much fuel can be carried the Truck? "))
-    speed = float(input("Enter the maximum speed of the Truck: "))
-    load_capacity = float(input("Enter the highest Load Capacity: "))
-    my_truck = Truck(speed, fuel_capacity, load_capacity)
-    my_truck.display_info()
+# elif vehicle_type == "truck":
+#     fuel_capacity = float(input("How much fuel can be carried the Truck? "))
+#     speed = float(input("Enter the maximum speed of the Truck: "))
+#     load_capacity = float(input("Enter the highest Load Capacity: "))
+#     my_truck = Truck(speed, fuel_capacity, load_capacity)
+#     my_truck.display_info()
 
-else:
-    print("Invalid Vehicle type!")
+# else:
+#     print("Invalid Vehicle type!")
 
 #######################################################################################################################################
 
@@ -1242,69 +1242,93 @@ else:
 #     print("Invalid Payment")
 
 
-class Employee:
-    def __init__(self, name):
-        self.name = name
+# class Employee:
+#     def __init__(self, name):
+#         self.name = name
 
-    def calculate_salary(self):
-        return 0
+#     def calculate_salary(self):
+#         return 0
 
-    def show_salary(self):
-        print(f"Employee Name: {self.name}")
-        print(f"Salary: ${self.calculate_salary():.2f}")
-
-
-class FullTimeEmployee(Employee):
-    def __init__(self, name, base_salary, bonus):
-        super().__init__(name)
-        self.__base_salary = base_salary
-        self.__bonus = bonus
-
-    def calculate_salary(self):
-        return self.__base_salary + self.__bonus
+#     def show_salary(self):
+#         print(f"Employee Name: {self.name}")
+#         print(f"Salary: ${self.calculate_salary():.2f}")
 
 
-class PartTimeEmployee(Employee):
-    def __init__(self, name, hourly_rate, hours_worked):
-        super().__init__(name)
-        self.__hourly_rate = hourly_rate
-        self.__hours_worked = hours_worked
+# class FullTimeEmployee(Employee):
+#     def __init__(self, name, base_salary, bonus):
+#         super().__init__(name)
+#         self.__base_salary = base_salary
+#         self.__bonus = bonus
 
-    def calculate_salary(self):
-        return self.__hourly_rate * self.__hours_worked
-
-
-class Freelancer(Employee):
-    def __init__(self, name, project_payment):
-        super().__init__(name)
-        self.__project_payment = project_payment
-
-    def calculate_salary(self):
-        return self.__project_payment
+#     def calculate_salary(self):
+#         return self.__base_salary + self.__bonus
 
 
-def print_payroll(employee):
-    employee.show_salary()
-    print("-" * 30)
+# class PartTimeEmployee(Employee):
+#     def __init__(self, name, hourly_rate, hours_worked):
+#         super().__init__(name)
+#         self.__hourly_rate = hourly_rate
+#         self.__hours_worked = hours_worked
+
+#     def calculate_salary(self):
+#         return self.__hourly_rate * self.__hours_worked
 
 
-full_name = input("Enter full-time employee name: ")
-base_salary = float(input("Enter base salary: "))
-bonus = float(input("Enter bonus: "))
+# class Freelancer(Employee):
+#     def __init__(self, name, project_payment):
+#         super().__init__(name)
+#         self.__project_payment = project_payment
 
-part_name = input("Enter part-time employee name: ")
-hourly_rate = float(input("Enter hourly rate: "))
-hours_worked = float(input("Enter hours worked: "))
+#     def calculate_salary(self):
+#         return self.__project_payment
 
-free_name = input("Enter freelancer name: ")
-project_payment = float(input("Enter project payment: "))
 
-employees = [
-    FullTimeEmployee(full_name, base_salary, bonus),
-    PartTimeEmployee(part_name, hourly_rate, hours_worked),
-    Freelancer(free_name, project_payment)
-]
+# def print_payroll(employee):
+#     employee.show_salary()
+#     print("-" * 30)
 
-print("\nPayroll Report:")
-for employee in employees:
-    print_payroll(employee)
+
+# full_name = input("Enter full-time employee name: ")
+# base_salary = float(input("Enter base salary: "))
+# bonus = float(input("Enter bonus: "))
+
+# part_name = input("Enter part-time employee name: ")
+# hourly_rate = float(input("Enter hourly rate: "))
+# hours_worked = float(input("Enter hours worked: "))
+
+# free_name = input("Enter freelancer name: ")
+# project_payment = float(input("Enter project payment: "))
+
+# employees = [
+#     FullTimeEmployee(full_name, base_salary, bonus),
+#     PartTimeEmployee(part_name, hourly_rate, hours_worked),
+#     Freelancer(free_name, project_payment)
+# ]
+
+# print("\nPayroll Report:")
+# for employee in employees:
+#     print_payroll(employee)
+
+# n = 5
+# for number in range(n):
+#     print("*" * 5)
+
+
+# n = 5
+
+# for row in range (1, n + 1):
+#     print("*" * row)
+
+# n = 5
+# for row in range(n):
+#     print("*" * row)
+
+number_of_row = 5
+number_of_column = 6
+
+for row in range(number_of_row):
+    for column in range(number_of_column):
+        print("*", end=" ")
+
+
+    print()
