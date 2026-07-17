@@ -1332,3 +1332,15 @@ for row in range(number_of_row):
 
 
     print()
+
+
+for row in range(1, number_of_row + 1):
+    for column in range(row):
+        print("*", end=" ") #star print করার পর একই লাইনে থাকে।
+
+    print()
+
+for row in range (number_of_row, 0, -1):
+    for column in range(row):
+        print("*", end=" ")
+    print()
