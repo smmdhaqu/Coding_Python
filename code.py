@@ -1326,21 +1326,32 @@
 number_of_row = 5
 number_of_column = 6
 
-for row in range(number_of_row):
-    for column in range(number_of_column):
-        print("*", end=" ")
+# for row in range(number_of_row):
+#     for column in range(number_of_column):
+#         print("*", end=" ")
 
 
-    print()
+#     print()
 
 
-for row in range(1, number_of_row + 1):
+# for row in range(1, number_of_row + 1): #range(start, stop)
+#     for column in range(row):
+#         print("*", end=" ") #star print করার পর একই লাইনে থাকে।
+
+#     print()
+
+# for row in range (number_of_row, 0, -1):
+#     for column in range(row):
+#         print("*", end=" ")
+#     print()
+
+
+# for row in range (number_of_row):
+#     for column in range(row):
+#         print()
+
+
+for row in range(number_of_row, 0, -1):
     for column in range(row):
-        print("*", end=" ") #star print করার পর একই লাইনে থাকে।
-
-    print()
-
-for row in range (number_of_row, 0, -1):
-    for column in range(row):
-        print("*", end=" ")
+        print(column, end= " ")
     print()
