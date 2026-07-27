@@ -1351,7 +1351,18 @@ number_of_column = 6
 #         print()
 
 
-for row in range(number_of_row, 0, -1):
+# for row in range(number_of_row, 0, -1):
+#     for column in range(row):
+#         print(column, end= " ")
+#     print()
+
+for row in range(1, number_of_row +1):
+    #print(row)
+    for column in range (number_of_row - row):
+        print(" ", end= " ")
     for column in range(row):
-        print(column, end= " ")
+        print("*", end= " ")
+    for column in range(1, row):
+        print("*", end= " ")
     print()
+
