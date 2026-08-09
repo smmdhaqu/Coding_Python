@@ -1356,13 +1356,55 @@ number_of_column = 6
 #         print(column, end= " ")
 #     print()
 
-for row in range(1, number_of_row +1):
-    #print(row)
-    for column in range (number_of_row - row):
-        print(" ", end= " ")
-    for column in range(row):
-        print("*", end= " ")
-    for column in range(1, row):
-        print("*", end= " ")
-    print()
+# for row in range(1, number_of_row +1):
+#     #print(row)
+#     for column in range (number_of_row - row):
+#         print(" ", end= " ")
+#     for column in range(row):
+#         print("*", end= " ")
+#     for column in range(1, row):  #for column in range(1, row):
+#         print("*", end= " ")
+#     print()
 
+# for row in range(number_of_row, 0, -1): #5, 4, 3, 2, 1
+#     #print(row)
+#     for column in range(number_of_row - row):
+#         print(" ", end= " ")
+#     for column in range(row*2 -1):
+#         print("*", end= " ")
+#     print()
+
+# for row in range(1, number_of_row + 1):
+#     print("  " * (number_of_row - row) + "* " * (2 * row -1))
+
+# for row in range(number_of_row, 0, -1):
+#     print("  " * (number_of_row- row) + "* " * (2 *row -1))
+
+################################### Try Except #######################################
+
+# find_age = "unknown"
+# try:
+#     age = int(find_age)
+#     print("The expected age is ", age)
+# except ValueError:
+#     #print("The given value is invalid")
+#     age = None
+# print("The given age is",age)
+
+
+# data_list = ["25", "Unknown", "16", "N/A"]
+
+# for ages in data_list:
+#     try:
+#         age = int(ages)
+#         print("The age is ", age)
+#     except ValueError:
+#         print("Invalid number such as", ages)
+
+try:
+    filess = open("sales.csv", "r")
+    print("File successfully open")
+    filess.close
+
+except FileNotFoundError:
+    print("File did not open")
