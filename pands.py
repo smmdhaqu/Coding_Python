@@ -37,7 +37,17 @@ import pandas as pd
 # result = (function1(5, lambda x: x *2))
 # print(result)
 
-given_number = int (input("Enter the number: "))
-check_number = lambda given_number: "Even" if given_number%2 == 0 else "Odd"
+# given_number = int (input("Enter the number: "))
+# check_number = lambda given_number: "Even" if given_number %2 == 0 else "Odd"
 
-print(check_number(given_number))
+# print(check_number(given_number))
+
+# numbers = lambda x, y= 2 : x*y
+# print(numbers(10))
+
+
+check_number = lambda numbers: "Even Number" if numbers%2 == 0 else "Odd Number"
+numbers = [3, 6, 7, 12, 18, 21, 29]
+
+for number in numbers:
+    print(number, "=", check_number(number) )
