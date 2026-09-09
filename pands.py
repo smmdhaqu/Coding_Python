@@ -46,8 +46,44 @@ import pandas as pd
 # print(numbers(10))
 
 
-check_number = lambda numbers: "Even Number" if numbers%2 == 0 else "Odd Number"
-numbers = [3, 6, 7, 12, 18, 21, 29]
+# check_number = lambda numbers: "Even Number" if numbers%2 == 0 else "Odd Number"
+# numbers = [3, -6, 7, 12, 18, 21, 29]
 
-for number in numbers:
-    print(number, "=", check_number(number) )
+# for number in numbers:
+#     print(number, "=", check_number(number))
+
+
+# check_number = lambda numbers: (
+#     "Zero"
+#     if numbers == 0
+#     else f"{"Even " if numbers % 2 == 0 else "Odd "}"
+#     f"{"Positive" if numbers > 0 else "Negative"}"
+# )
+
+# numbers = [7, -8, +11, 23, -209, 0, -38]
+
+# for number in numbers:
+#     print(number, "=", check_number(number))
+
+
+# salaries = [20000, 30000, 15000, 19900, 49500]
+
+# new_salaries =list(map(lambda x: x*1.5, salaries))
+# print(new_salaries)
+
+
+
+
+products = [
+    {"name": "Laptop", "price": 50000},
+    {"name": "Mouse", "price": 500},
+    {"name": "Keyboard", "price": 1200},
+    {"name": "Monitor", "price": 15000}
+]
+
+new_price = list(map(lambda x : {"Name": x["name"], "Price": x["price"] * 1.15}, products))
+
+print("The product's old price: ", products)
+
+print("New Price of the products: ", new_price)
+
