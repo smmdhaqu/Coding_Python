@@ -74,16 +74,55 @@ import pandas as pd
 
 
 
-products = [
-    {"name": "Laptop", "price": 50000},
-    {"name": "Mouse", "price": 500},
-    {"name": "Keyboard", "price": 1200},
-    {"name": "Monitor", "price": 15000}
-]
+# products = [
+#     {"name": "Laptop", "price": 50000},
+#     {"name": "Mouse", "price": 500},
+#     {"name": "Keyboard", "price": 1200},
+#     {"name": "Monitor", "price": 15000}
+# ]
 
-new_price = list(map(lambda x : {"Name": x["name"], "Price": x["price"] * 1.15}, products))
+# new_price = list(map(lambda x : {"Name": x["name"], "Price": x["price"] * 1.15}, products))
 
-print("The product's old price: ", products)
+# print("The product's old price: ", products)
 
-print("New Price of the products: ", new_price)
+# print("New Price of the products: ", new_price)
 
+# df = pd.DataFrame({
+#     "products": ["Laptop", "Monitor", "Mouse"],
+#     "price": [50000, 25000, 1500]
+#     }
+# )
+
+# df["grade"] = df["price"].map(
+#     lambda x : "High" if x>30000
+#     else "Medium" if x> 20000
+#     else "Low")
+# print(df)
+
+# df = pd.DataFrame (
+#     {
+#         "Name": [
+#             "RAHim", " korim", "RaaJu", " SHAMS"
+#         ]
+#     }
+# )
+
+# df["Clean_Data"] = df["Name"].map(
+#     lambda x: x.strip().title()
+# )
+
+# print(df)
+
+df = pd.DataFrame(
+    {
+        "Gender": ["Male", "Female", "Female", "Bisexual", "Male", "Lesbian" ]
+    }
+)
+
+df["Gender_Code"] = df["Gender"].map(
+    lambda x : "1" if x == "Male"
+    else "2" if x == "Female"
+    else "0"
+)
+
+print(df)
