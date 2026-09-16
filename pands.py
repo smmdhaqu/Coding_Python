@@ -113,16 +113,30 @@ import pandas as pd
 
 # print(df)
 
+# df = pd.DataFrame(
+#     {
+#         "Gender": ["Male", "Female", "Female", "Bisexual", "Male", "Lesbian" ]
+#     }
+# )
+
+# df["Gender_Code"] = df["Gender"].map(
+#     lambda x : 1 if x == "Male"
+#     else 2 if x == "Female"
+#     else 0
+# )
+
+# print(df)
+
+
 df = pd.DataFrame(
     {
-        "Gender": ["Male", "Female", "Female", "Bisexual", "Male", "Lesbian" ]
+        "Sales": [1000, 2000],
+        "Profit": [1500, 3000]
+
     }
 )
 
-df["Gender_Code"] = df["Gender"].map(
-    lambda x : "1" if x == "Male"
-    else "2" if x == "Female"
-    else "0"
+df["Profit"] = df.apply(
+    lambda x : x["Profit"] -x["Sales"],axis=1
 )
-
 print(df)
